@@ -21,7 +21,7 @@ resource "aws_instance" "web" {
   availability_zone = "ap-south-1a"
   #availability_zone = "ap-south-1b"
   tags = {
-    "Name" = "web-1"
+    "Name" = "web-1"  # Name = "web-1" is also correct, double quotes is used when key has space or numbers= "Env prod One"
   }
   lifecycle {
     create_before_destroy = true
