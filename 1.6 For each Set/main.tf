@@ -17,5 +17,5 @@ provider "aws" {
 # Create 4 IAM Users
 resource "aws_iam_user" "myuser" {
   for_each = toset(["TJack", "TJames", "TMadhu", "TDave"])
-  name     = each.value
+  name     = each.value  # each.key also i can use, for_each toset. both are same.
 }
