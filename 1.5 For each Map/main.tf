@@ -25,7 +25,7 @@ resource "aws_s3_bucket" "mys3bucket" {
     prod = "my-papp-bucket-455"
   }
 
-  bucket = "${each.key}-${each.value}"    # dev-my-dapp-bucket-455
+  bucket = "${each.key}-${each.value}"    # dev-my-dapp-bucket-455  we can use each.key + "-" + each.value
   acl    = "private"
 
   tags = {
